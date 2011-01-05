@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  room_number: MyString
+  room_name: MyString
+  room_description: MyText
+  room_type: MyString
+  floor: MyString
+
+two:
+  room_number: MyString
+  room_name: MyString
+  room_description: MyText
+  room_type: MyString
+  floor: MyString

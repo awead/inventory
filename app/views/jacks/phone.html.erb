@@ -1,0 +1,19 @@
+<h1>Phone list</h1>
+
+<table border=2>
+  <tr>
+    <th>Room Number</th>
+    <th>Name</th>
+    <th>Extension</th>
+  </tr>
+
+<% for j in @jacks%>
+<tr>
+<td><%=h j.room_number %></td> 
+<td><%=h j.room_name %></td> 
+<td><%=h j.jack_extension %></td> 
+<% end %>
+</tr>
+</table>
+
+<%= link_to "Home", root_path %>

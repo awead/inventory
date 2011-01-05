@@ -1,0 +1,35 @@
+<% form_for([@room, @jack]) do |f| %>  
+  
+  <%= f.error_messages %>  
+
+  <p>
+    <%= f.label :jack_number %> <br />
+    <%= f.text_field :jack_number %>
+  </p>
+
+  <p>
+    <%= f.label :jack_type %> <br />
+    <%= f.select :jack_type,
+        options_for_select(["Data", "Phone", "Green", "Red", "Analog", "Cable"], @jack.jack_type) %>
+  </p>
+
+  <p>
+    <%= f.label :jack_status %> <br />
+    <%= f.radio_button :jack_status, "Inactive" %> Inactive
+    <%= f.radio_button :jack_status, "Active" %> Active
+  </p>
+
+  <p>
+    <%= f.label :jack_extension %> <br />
+    <%= f.text_field :jack_extension %>
+  </p>
+
+  <p>
+    <%= f.label :jack_description %> <br />
+    <%= f.text_area :jack_description %>
+  </p>
+
+
+  <p>  <%= f.submit "Save" %>  </p>
+
+<% end %> 
