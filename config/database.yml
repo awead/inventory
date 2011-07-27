@@ -20,9 +20,9 @@ development:
   reconnect: false
   database: inventory_development
   pool: 5
-  username: root
-  password: largefrogs
-  socket: /var/lib/mysql/mysql.sock
+  username: railsuser
+  password: password
+  host: boogie
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -33,9 +33,9 @@ test:
   reconnect: false
   database: inventory_test
   pool: 5
-  username: root
-  password: largefrogs
-  socket: /var/lib/mysql/mysql.sock
+  username: railsuser
+  password: password
+  host: boogie
 
 production:
   adapter: mysql
@@ -43,6 +43,6 @@ production:
   reconnect: false
   database: inventory_production
   pool: 5
-  username: root
-  password: largefrogs
-  socket: /var/lib/mysql/mysql.sock
+  username: railsuser
+  password: password
+  host: boogie
