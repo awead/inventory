@@ -1,0 +1,13 @@
+<h3> Move <%=h @tech.name %> </h3>
+
+<% form_for([@room, @tech]) do |f| %>
+
+  <p>
+  <b>Move from <%=h @room.room_name %> to:</b>
+    <%= f.select :room_id,
+        options_from_collection_for_select( @keys, "id", "room_name", @tech.room_id ) %>
+  </p>
+                           
+<p>  <%= f.submit "Save" %>  </p>
+
+<% end %>
