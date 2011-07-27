@@ -1,0 +1,45 @@
+<h1><%= @tech.name %> in <%= @room.room_name %> </h1>
+
+<table border=1>
+  <tr>
+    <th>Name</th>
+    <td><%=h @tech.name %></td>
+  </tr>
+  <tr>
+    <th>Model</th>
+    <td><%=h @tech.model %></td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td><%=h @tech.tech_type %></td>
+  </tr>
+  <tr>
+    <th>Vendor</th>
+    <td><%=h @tech.vendor %></td>
+  </tr>
+  <tr>
+    <th>Serial</th>
+    <td><%=h @tech.serial %></td>
+  </tr>
+  <tr>
+    <th>MAC</th>
+    <td><%=h @tech.tech_mac %></td>
+  </tr>
+  <tr>
+    <th>IP</th>
+    <td><%=h @tech.tech_ip %></td>
+  </tr>
+  <tr>
+    <th>Network Name</th>
+    <td><%=h @tech.net_name %></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><%=h @tech.description %></td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_room_tech_path(@room, @tech) %> | 
+<%= link_to 'Room Listing', rooms_path %> |
+<%= link_to 'Equipment Listing', techlist_path %> |
+<%= link_to 'Move to another room', move_tech_path(@room, @tech) %>

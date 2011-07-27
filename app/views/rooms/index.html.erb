@@ -1,0 +1,13 @@
+<div id="search">
+  <%= render :partial => "/layouts/search_form" %>
+</div>
+
+
+<h1>Listing rooms</h1>
+
+<%= link_to 'New room', new_room_path %> |
+<%= link_to 'Home',     root_path %>
+
+<%= will_paginate @rooms %>
+
+<%= render :partial => "table" %>

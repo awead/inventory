@@ -1,0 +1,33 @@
+<table border=2>
+  <tr>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Type</th>
+    <th>Vendor</th>
+    <th>Serial</th>
+    <th>MAC</th>
+    <th>IP</th>
+    <th>Network Name</th>
+    <th>Description</th>
+    <th>Room</th>
+    <th>Number</th>
+  </tr>
+
+  <% for t in @teches %>
+  <tr>
+    <td><%= link_to t.name, room_tech_path(t.room_id, t.id) %></td> 
+    <td><%=h t.model%></td> 
+    <td><%=h t.tech_type %></td> 
+    <td><%=h t.vendor %></td> 
+    <td><%=h t.serial %></td> 
+    <td><%=h t.tech_mac %></td> 
+    <td><%=h t.tech_ip %></td> 
+    <td><%=h t.net_name %></td> 
+    <td><%=h t.description %></td> 
+    <td><%=h t.room_name %></td> 
+    <td><%=h t.room_number %></td> 
+  <% end %>
+  </tr>
+
+</table>
+

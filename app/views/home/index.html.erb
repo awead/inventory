@@ -1,0 +1,18 @@
+<h1>Library and Archive Inventory</h1>
+<p>This application is under development</p>
+
+<table>
+  <tr>
+    <td> <%= link_to "List all rooms", rooms_path %> or search: </td>
+    <td> <%= render :partial => "/layouts/search_form" %> </td>
+  </tr>
+  <tr>
+    <td> <%= link_to "List all equipment", techlist_path %> or search: </td>
+    <td> <%= render :partial => "/layouts/search_tech" %> </td>
+  </tr>
+</table>
+
+<ul>
+  <li> <%= link_to "Jack list", jacklist_path %> </li>
+  <li> <%= link_to "Phone list", phonelist_path %> </li>
+</ul>

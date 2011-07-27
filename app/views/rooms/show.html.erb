@@ -1,0 +1,68 @@
+<h2> Detail for room  <%=h @room.room_number %> </h2>
+
+<table border=1>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Floor</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <td>
+      <%=h @room.room_name %>
+    </td>
+    <td>
+      <%=h @room.room_description %>
+    </td>
+    <td>
+      <%=h @room.floor %>
+    </td>
+    <td>
+      <%=h @room.room_type %>
+    </td>
+  </tr>
+  <tr>
+    <th>Data Jacks</th>
+    <td colspan=3>
+      <table>
+        <tr>
+          <th>Jack Number</th>
+          <th>Type</th>
+          <th>Status</th>
+        </tr>
+        <% @room.jacks.each do |j| %>
+        <tr>
+          <td><%=h j.jack_number %></td>
+          <td><%=h j.jack_type %></td>
+          <td><%=h j.jack_status %></td>
+        </tr>
+        <% end %>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th>Equipment</th>
+    <td colspan=3>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Type</th>
+          </tr>
+          <% @room.teches.each do |t| %>
+          <tr>
+            <td><%=h t.name %></td>
+            <td><%=h t.model %></td>
+            <td><%=h t.tech_type %></td>
+          </tr>
+        <% end %>
+        </table>
+    </td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
+<%= link_to 'Manage jacks', room_jacks_path(@room) %>
+<%= link_to 'Manage equipment', room_teches_path(@room) %>
+

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  model: MyString
+  vendor: MyString
+  serial: MyString
+  type: MyString
+  description: MyText
+  room: 
+
+two:
+  name: MyString
+  model: MyString
+  vendor: MyString
+  serial: MyString
+  type: MyString
+  description: MyText
+  room: 
