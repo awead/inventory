@@ -29,9 +29,7 @@ module ApplicationHelper
     else
       color = "#FFFFFF"
     end
-
-    color
-
+    return color.html_safe
   end
 
   def jack_text(type)
@@ -40,9 +38,7 @@ module ApplicationHelper
     else
       text = "&nbsp;"
     end
-
-    text
-
+    return text.html_safe
   end
 
   def jack_text_color(status)
@@ -51,9 +47,7 @@ module ApplicationHelper
     else
       color = "color: #FFFFFF"
     end
-
-    color
-
+    return color.html_safe
   end
 
 end
