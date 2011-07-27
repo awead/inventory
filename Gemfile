@@ -9,6 +9,8 @@ gem 'rails', '3.0.9'
 #gem 'sqlite3-ruby', '1.2.5'
 gem 'mysql2'
 gem 'mysql'
+gem 'will_paginate'
+gem 'dynamic_form'
 
 
 # Use unicorn as the web server
