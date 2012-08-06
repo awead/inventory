@@ -8,6 +8,7 @@
     <th>Vendor</th>
     <th>Serial</th>
     <th>MAC</th>
+    <th>Wifi MAC</th>
     <th>IP</th>
     <th>Network Name</th>
     <th>Description</th>
@@ -15,15 +16,16 @@
 
   <% for t in @teches %>
   <tr>
-    <td><%=h t.name %></td> 
-    <td><%=h t.model%></td> 
-    <td><%=h t.tech_type %></td> 
-    <td><%=h t.vendor %></td> 
-    <td><%=h t.serial %></td> 
-    <td><%=h t.tech_mac %></td> 
-    <td><%=h t.tech_ip %></td> 
-    <td><%=h t.net_name %></td> 
-    <td><%=h t.description %></td> 
+    <td><%=h t.name %></td>
+    <td><%=h t.model%></td>
+    <td><%=h t.tech_type %></td>
+    <td><%=h t.vendor %></td>
+    <td><%=h t.serial %></td>
+    <td><%=h t.tech_mac %></td>
+    <td><%=h t.wifi_mac %></td>
+    <td><%=h t.tech_ip %></td>
+    <td><%=h t.net_name %></td>
+    <td><%=h t.description %></td>
     <td>
       <%= link_to 'Edit', edit_room_tech_path(@room, t) %>
     </td>
@@ -37,4 +39,4 @@
 </table>
 
 <%= link_to 'Add equipment', new_room_tech_path(@room) %>
-<%= link_to 'Back to Room', @room %> 
+<%= link_to 'Back to Room', @room %>

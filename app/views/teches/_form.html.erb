@@ -1,6 +1,6 @@
-<% form_for([@room, @tech]) do |f| %>  
-  
-  <%= f.error_messages %>  
+<% form_for([@room, @tech]) do |f| %>
+
+  <%= f.error_messages %>
 
   <p>
     <%= f.label :name %> <br />
@@ -34,6 +34,11 @@
   </p>
 
   <p>
+    <%= f.label "Wifi MAC Address" %> <br />
+    <%= f.text_field :wifi_mac %>
+  </p>
+
+  <p>
     <%= f.label "IP" %> <br />
     <%= f.text_field :tech_ip %>
   </p>
@@ -50,4 +55,4 @@
 
   <p>  <%= f.submit "Save" %>  </p>
 
-<% end %> 
+<% end %>
