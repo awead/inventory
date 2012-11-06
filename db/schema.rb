@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120806221736) do
+ActiveRecord::Schema.define(:version => 20121106161539) do
 
   create_table "jacks", :force => true do |t|
     t.string   "jack_number"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20120806221736) do
     t.string   "tech_ip"
     t.string   "net_name"
     t.string   "wifi_mac"
+    t.string   "wifi_ip"
   end
 
 end
