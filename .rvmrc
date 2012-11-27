@@ -1,1 +1,1 @@
-rvm gemset use inventory
+rvm use ruby-1.9.3-p286@inventory --create
