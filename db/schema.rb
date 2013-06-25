@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -18,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20121106161539) do
     t.string   "jack_status"
     t.string   "jack_extension"
     t.integer  "room_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.text     "jack_description"
   end
 
@@ -29,8 +30,8 @@ ActiveRecord::Schema.define(:version => 20121106161539) do
     t.text     "room_description"
     t.string   "room_type"
     t.string   "floor"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "teches", :force => true do |t|
@@ -41,8 +42,8 @@ ActiveRecord::Schema.define(:version => 20121106161539) do
     t.string   "tech_type"
     t.text     "description"
     t.integer  "room_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "tech_mac"
     t.string   "tech_ip"
     t.string   "net_name"
