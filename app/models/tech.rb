@@ -1,5 +1,7 @@
 class Tech < ActiveRecord::Base
 
+  # Fields
+  attr_accessible :name, :model, :tech_type, :vendor, :serial, :tech_mac, :wifi_mac, :tech_ip, :wifi_ip, :net_name, :description
 
   validates_presence_of :name, :vendor, :tech_type
   validates_uniqueness_of :serial

@@ -1,5 +1,8 @@
 class Jack < ActiveRecord::Base
 
+  # Fields
+  attr_accessible :jack_number, :jack_type, :jack_status, :jack_extension, :jack_description 
+
   # Required fields
   validates_presence_of     :jack_number, :jack_type, :jack_status
   validates_uniqueness_of   :jack_number

@@ -1,5 +1,8 @@
 class Room < ActiveRecord::Base
 
+    # Fields
+    attr_accessible :room_number, :floor, :room_name, :room_description, :room_type
+
     # Validation
     validates_presence_of :room_name, :room_number, :room_type, :floor
     validates_uniqueness_of :room_name, :scope => :room_number
