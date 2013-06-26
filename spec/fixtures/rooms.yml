@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  room_number: 001
+  room_name: Basement
+  room_description: Room in the basement
+  room_type: Closet
+  floor: 1
+
+two:
+  room_number: 102
+  room_name: Office
+  room_description: Office on the second floor
+  room_type: Office
+  floor: 2
