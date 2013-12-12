@@ -1,0 +1,26 @@
+office_data:
+  id: 1
+  jack_number: RG-001-01
+  jack_type: Data
+  jack_status: Active
+  jack_extension:
+  jack_description:
+  room_id: 2
+
+office_phone:
+  id: 2
+  jack_number: RG-001-02
+  jack_type: Phone
+  jack_status: Active
+  jack_extension: 1234
+  jack_description: My office phone
+  room_id: 2
+
+basement_data:
+  id: 3
+  jack_number: RG-000-01
+  jack_type: Data
+  jack_status: Inactive
+  jack_extension:
+  jack_description:
+  room_id: 1

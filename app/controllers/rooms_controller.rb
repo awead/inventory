@@ -1,12 +1,11 @@
 class RoomsController < ApplicationController
 
-  before_filter :find_room,
-    :only => [:show, :edit, :update, :destroy] 
+  before_filter :find_room, :only => [:show, :edit, :update, :destroy] 
 
   # GET /rooms
   # GET /rooms.xml
   def index
-    @rooms = Room.paginate :page => params[:page], :order => 'room_number ASC' 
+    @rooms = Room.search(params[:search]).order("room_number").paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,11 +40,11 @@ class RoomsController < ApplicationController
   # POST /rooms
   # POST /rooms.xml
   def create
-    @room = Room.new(params[:room])
+    @room = Room.new(room_parameters)
 
     respond_to do |format|
       if @room.save
-        flash[:notice] = 'Room was successfully created.'
+        flash[:notice] = "Room was successfully created."
         format.html { redirect_to(@room) }
         format.xml  { render :xml => @room, :status => :created, :location => @room }
       else
@@ -59,8 +58,8 @@ class RoomsController < ApplicationController
   # PUT /rooms/1.xml
   def update
     respond_to do |format|
-      if @room.update_attributes(params[:room])
-        flash[:notice] = 'Room was successfully updated.'
+      if @room.update_attributes(room_parameters)
+        flash[:notice] = "Room was successfully updated."
         format.html { redirect_to(@room) }
         format.xml  { head :ok }
       else
@@ -73,7 +72,7 @@ class RoomsController < ApplicationController
   # DELETE /rooms/1
   # DELETE /rooms/1.xml
   def destroy
-    @room.destroy
+    Room.find(params[:id]).destroy
 
     respond_to do |format|
       format.html { redirect_to(rooms_url) }
@@ -81,12 +80,14 @@ class RoomsController < ApplicationController
     end
   end
 
-  def search
-    @rooms = Room.search params[:search]
+  private
+  
+  def find_room
+    @room = Room.find(params[:id])
   end
 
-  private
-    def find_room
-      @room = Room.find(params[:id])
-    end
+  def room_parameters
+    params.require(:room).permit(:room_number, :floor, :room_name, :room_description, :room_type)
+  end
+
 end

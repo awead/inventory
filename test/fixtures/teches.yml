@@ -1,0 +1,13 @@
+computer:
+  name: Dell laptop
+  model: T3500
+  tech_type: Laptop
+  vendor: Dell
+  serial: 1234
+  tech_mac: aa:aa:aa:aa:aa:aa
+  wifi_mac: aa:aa:aa:aa:aa:ab
+  tech_ip: 192.168.1.1
+  wifi_ip: 192.168.1.2
+  net_name: MY-LAPTOP
+  description: Laptop used in the office
+  room_id: 2

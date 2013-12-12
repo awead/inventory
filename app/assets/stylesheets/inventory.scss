@@ -1,0 +1,48 @@
+$link-color: #d9534f;
+$link-hover-color: darken($link-color, 15%);
+
+@import 'bootstrap';
+
+.jack {
+  margin: 2px;
+  border: solid 5px black;
+  border-right-width: 15px;
+  border-left-width: 15px;
+}
+
+.data-active {
+  border-color: #0000FF;
+}
+.data-inactive {
+  border-color: #000066;
+}
+.green-active {
+  border-color: #00FF00;
+}
+.green-inactive {
+  border-color: #006600;
+}
+.red-active {
+  border-color: #FF0000;
+}
+.red-inactive {
+  border-color: #660000;
+}
+.phone-active {
+  border-color: #CCCCCC;
+}
+.phone-inactive {
+  border-color: #606060;
+}
+.analog-active {
+  border-color: #FFFF66;
+}
+.analog-inactive {
+  border-color: #606060;
+}
+.cable-active {
+  border-color: #FFFFFF;
+}
+.cable-inactive {
+  border-color: #000000;
+}

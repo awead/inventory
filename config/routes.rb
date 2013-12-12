@@ -1,19 +1,14 @@
 Inventory::Application.routes.draw do
 
-  root :to => "home#index"
+  root :to => "rooms#index"
   resources :rooms do
     resources :jacks 
     resources :teches
   end
   
-  match "jacklist"    => "jacks#list"
-  match "techlist"    => "teches#list"
-  match "phonelist"   => "jacks#phone"
-  match "searchrooms" => "rooms#search"
-  
-  #  map.move_tech "rooms/:room_id/teches/:id/move", :controller => "teches", :action => "move"
-  match "rooms/:room_id/teches/:id/move" => "teches#move", :as => :move_tech
- 
-  match ':controller(/:action(/:id(.:format)))'
+  match "jacklist"    => "jacks#list",   :via => [:get]
+  match "techlist"    => "teches#list",  :via => [:get]
+  match "phonelist"   => "jacks#phone",  :via => [:get]
+  match "searchrooms" => "rooms#search", :via => [:get]
 
 end

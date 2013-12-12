@@ -30,7 +30,7 @@ class JacksController < ApplicationController
 
   def create
     @room = Room.find(params[:room_id])
-    @jack = @room.jacks.build(params[:jack])
+    @jack = @room.jacks.build(jack_parameters)
     if @jack.save
       redirect_to room_jack_url(@room, @jack)
     else
@@ -41,7 +41,7 @@ class JacksController < ApplicationController
   def update
     @room = Room.find(params[:room_id])
     @jack = Jack.find(params[:id])
-    if @jack.update_attributes(params[:jack])
+    if @jack.update_attributes(jack_parameters)
       redirect_to room_jack_url(@room, @jack)
     else
       render :action => "edit"
@@ -59,5 +59,10 @@ class JacksController < ApplicationController
     end
   end
 
+  private
+
+  def jack_parameters
+    params.require(:jack).permit(:jack_number, :jack_type, :jack_status, :jack_extension, :jack_description)
+  end
 
 end

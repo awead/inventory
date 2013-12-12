@@ -1,22 +1,22 @@
 class Tech < ActiveRecord::Base
 
-  # Fields
-  attr_accessible :name, :model, :tech_type, :vendor, :serial, :tech_mac, :wifi_mac, :tech_ip, :wifi_ip, :net_name, :description
-
-  validates_presence_of :name, :vendor, :tech_type
+  validates_presence_of   :name, :vendor, :tech_type
+  
   validates_uniqueness_of :serial
   validates_uniqueness_of :tech_mac, :allow_nil => true, :allow_blank => true
   validates_uniqueness_of :wifi_mac, :allow_nil => true, :allow_blank => true
-  validates_uniqueness_of :tech_ip, :allow_nil => true, :allow_blank => true
-  validates_uniqueness_of :wifi_ip, :allow_nil => true, :allow_blank => true
-  validates_format_of :tech_mac, :with => /^(\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2})?$/,
+  validates_uniqueness_of :tech_ip,  :allow_nil => true, :allow_blank => true
+  validates_uniqueness_of :wifi_ip,  :allow_nil => true, :allow_blank => true
+  
+  validates_format_of     :tech_mac, :with => /\A(\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2})?\z/,
     :message => "Please use the format XX:XX:XX:XX:XX:XX for the MAC address"
-  validates_format_of :wifi_mac, :with => /^(\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2})?$/,
+  validates_format_of :wifi_mac, :with => /\A(\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2}:\S{1,2})?\z/,
     :message => "Please use the format XX:XX:XX:XX:XX:XX for the MAC address"
-  validates_format_of :tech_ip, :with => /^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?$/,
+  validates_format_of :tech_ip, :with => /\A(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?\z/,
     :message => "Please use the format ###.###.###.### for the IP"
-  validates_format_of :wifi_ip, :with => /^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?$/,
+  validates_format_of :wifi_ip, :with => /\A(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?\z/,
     :message => "Please use the format ###.###.###.### for the IP"
+  
   belongs_to :room
 
   @sql_list =
@@ -40,6 +40,5 @@ class Tech < ActiveRecord::Base
 
     Tech.find_by_sql(sql)
   end
-
 
 end

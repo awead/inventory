@@ -1,0 +1,87 @@
+one:
+  id: 1
+  room_number: "001"
+  room_name: Storage
+  room_description: Basement storage area
+  room_type: Storage
+  floor: 1
+
+two:
+  id: 2
+  room_number: "102"
+  room_name: Archives reading room
+  room_description:
+  room_type: Room
+  floor: 2
+
+conservation_lab:
+  id: 3
+  room_number: "002"
+  room_name: Conservation
+  room_description: Conservation lab
+  room_type: Lab
+  floor: 1
+
+quarantine:
+  id: 4
+  room_number: "010"
+  room_name: Quarentine
+  room_description: Quarentine area for contaminated items
+  room_type: Lab
+  floor: 1
+
+library_reading:
+  id: 5
+  room_number: "101"
+  room_name: Library Reading Room
+  room_description: 
+  room_type: Room
+  floor: 2
+
+archivists_office:
+  id: 6
+  room_number: "105"
+  room_name: Head Archivist
+  room_description: Office of the Head Archivist
+  room_type: Office
+  floor: 2
+
+directors_office:
+  id: 7
+  room_number: "110"
+  room_name: Director
+  room_description: Office of the Director
+  room_type: Office
+  floor: 2
+
+av_lab:
+  id: 8
+  room_number: "202"
+  room_name: A/V Lab
+  room_description:
+  room_type: Lab
+  floor: 3
+
+server_room:
+  id: 9
+  room_number: "205"
+  room_name: MDF
+  room_description: Server room
+  room_type: Storage
+  floor: 3
+
+archives_2:
+  id: 10
+  room_number: "200"
+  room_name: Archives
+  room_description: Second-floor archives
+  room_type: Room
+  floor: 3
+
+archives_3:
+  id: 11
+  room_number: "300"
+  room_name: Archives
+  room_description: Third-floor archives
+  room_type: Room
+  floor: 4

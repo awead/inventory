@@ -9,32 +9,32 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121106161539) do
+ActiveRecord::Schema.define(version: 20121106161539) do
 
-  create_table "jacks", :force => true do |t|
+  create_table "jacks", force: true do |t|
     t.string   "jack_number"
     t.string   "jack_type"
     t.string   "jack_status"
     t.string   "jack_extension"
     t.integer  "room_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.text     "jack_description"
   end
 
-  create_table "rooms", :force => true do |t|
+  create_table "rooms", force: true do |t|
     t.string   "room_number"
     t.string   "room_name"
     t.text     "room_description"
     t.string   "room_type"
     t.string   "floor"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "teches", :force => true do |t|
+  create_table "teches", force: true do |t|
     t.string   "name"
     t.string   "model"
     t.string   "vendor"
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(:version => 20121106161539) do
     t.string   "tech_type"
     t.text     "description"
     t.integer  "room_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "tech_mac"
     t.string   "tech_ip"
     t.string   "net_name"

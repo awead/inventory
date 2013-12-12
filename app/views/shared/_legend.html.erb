@@ -1,0 +1,35 @@
+<div class="modal fade" id="legend" tabindex="-1" role="dialog" aria-labelledby="legend_label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="legend_label">Legend</h4>
+      </div>
+      <div class="modal-body">
+        <%= content_tag :dl, :class => "dl-horizontal" do %>
+          <%= content_tag :dt, "Active data jack" %>
+          <%= content_tag :dd, render_jack_badge("data", "active") %>
+          <%= content_tag :dt, "Inactive data jack" %>
+          <%= content_tag :dd, render_jack_badge("data", "inactive") %>
+          <%= content_tag :dt, "Active phone jack" %>
+          <%= content_tag :dd, render_jack_badge("phone", "active") %>
+          <%= content_tag :dt, "Inactive phone jack" %>
+          <%= content_tag :dd, render_jack_badge("phone", "inactive") %>
+          <%= content_tag :dt, "Active red jack" %>
+          <%= content_tag :dd, render_jack_badge("red", "active") %>
+          <%= content_tag :dt, "Inactive red jack" %>
+          <%= content_tag :dd, render_jack_badge("red", "inactive") %>
+          <%= content_tag :dt, "Active green jack" %>
+          <%= content_tag :dd, render_jack_badge("green", "active") %>
+          <%= content_tag :dt, "Inactive green jack" %>
+          <%= content_tag :dd, render_jack_badge("green", "inactive") %>
+          <%= content_tag :dt, "Active analog jack" %>
+          <%= content_tag :dd, render_jack_badge("analog", "active") %>
+          <%= content_tag :dt, "Inactive analog jack" %>
+          <%= content_tag :dd, render_jack_badge("analog", "inactive") %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

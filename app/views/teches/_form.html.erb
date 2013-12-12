@@ -3,6 +3,11 @@
   <%= f.error_messages %>
 
   <p>
+    <b>Move from <%=h @room.room_name %> to:</b>
+    <%= f.select :room_id, options_from_collection_for_select( Room.room_keys(), "id", "room_name", @tech.room_id ) %>
+  </p>
+
+  <p>
     <%= f.label :name %> <br />
     <%= f.text_field :name %>
   </p>

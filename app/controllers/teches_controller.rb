@@ -1,6 +1,5 @@
 class TechesController < ApplicationController
 
-
   def index
     @room   = Room.find(params[:room_id])
     @teches = @room.teches 
@@ -14,12 +13,6 @@ class TechesController < ApplicationController
   def edit
     @room   = Room.find(params[:room_id])
     @tech   = @room.teches.find(params[:id])
-  end
-
-  def move
-    @room   = Room.find(params[:room_id])
-    @tech   = @room.teches.find(params[:id])
-    @keys   = Room.room_keys()
   end
 
   def show
@@ -37,7 +30,7 @@ class TechesController < ApplicationController
 
   def create
     @room   = Room.find(params[:room_id])
-    @tech   = @room.teches.build(params[:tech])
+    @tech   = @room.teches.build(tech_parameters)
     if @tech.save
       redirect_to room_tech_url(@room, @tech)
     else
@@ -48,7 +41,7 @@ class TechesController < ApplicationController
   def update
     @room   = Room.find(params[:room_id])
     @tech   = Tech.find(params[:id])
-    if @tech.update_attributes(params[:tech])
+    if @tech.update_attributes(tech_parameters)
       if (params[:tech]["room_id"])
         redirect_to room_tech_url(params[:tech]["room_id"], @tech)
       else
@@ -71,5 +64,10 @@ class TechesController < ApplicationController
 
   end
 
+  private
+
+  def tech_parameters
+    params.require(:tech).permit(:name, :model, :tech_type, :vendor, :serial, :tech_mac, :wifi_mac, :tech_ip, :wifi_ip, :net_name, :description, :room_id)
+  end
 
 end

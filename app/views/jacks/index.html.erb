@@ -22,7 +22,7 @@
       </td>
       <td>
         <%= link_to 'Delete', room_jack_path(@room, jack),
-            :confirm => 'Are you sure?', :method => :delete %>
+            :data => { :confirm => 'Are you sure?' }, :method => :delete %>
       </td>
     </tr>
   <% end %>

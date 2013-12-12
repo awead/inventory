@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Inventory</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -8,7 +8,17 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render "shared/navbar" %>
+  <%= render "shared/legend" %>
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

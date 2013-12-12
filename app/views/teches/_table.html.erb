@@ -1,37 +1,37 @@
-<table border=2>
-  <tr>
-    <th>Name</th>
-    <th>Model</th>
-    <th>Type</th>
-    <th>Vendor</th>
-    <th>Serial</th>
-    <th>MAC</th>
-    <th>Wifi MAC</th>
-    <th>IP</th>
-    <th>Wifi IP</th>
-    <th>Network Name</th>
-    <th>Description</th>
-    <th>Room</th>
-    <th>Number</th>
-  </tr>
+<%= content_tag :table, :class => "table table-condensed table-striped" do %>
+  <%= content_tag :tr do %>
+    <%= content_tag :th, "Name" %>
+    <%= content_tag :th, "Model" %>
+    <%= content_tag :th, "Type" %>
+    <%= content_tag :th, "Vendor" %>
+    <%= content_tag :th, "Serial" %>
+    <%= content_tag :th, "MAC" %>
+    <%= content_tag :th, "Wifi MAC" %>
+    <%= content_tag :th, "IP" %>
+    <%= content_tag :th, "Wifi IP" %>
+    <%= content_tag :th, "Network Name" %>
+    <%= content_tag :th, "Description" %>
+    <%= content_tag :th, "Room" %>
+    <%= content_tag :th, "Number" %>
+  <% end %>
 
   <% for t in @teches %>
-  <tr>
-    <td><%= link_to t.name, room_tech_path(t.room_id, t.id) %></td>
-    <td><%=h t.model%></td>
-    <td><%=h t.tech_type %></td>
-    <td><%=h t.vendor %></td>
-    <td><%=h t.serial %></td>
-    <td><%=h t.tech_mac %></td>
-    <td><%=h t.wifi_mac %></td>
-    <td><%=h t.tech_ip %></td>
-    <td><%=h t.wifi_ip %></td>
-    <td><%=h t.net_name %></td>
-    <td><%=h t.description %></td>
-    <td><%=h t.room_name %></td>
-    <td><%=h t.room_number %></td>
+    <%= content_tag :tr do %>
+      <%= content_tag :td, link_to(t.name, room_tech_path(t.room_id, t.id)) %>
+      <%= content_tag :td, t.model%>
+      <%= content_tag :td, t.tech_type %>
+      <%= content_tag :td, t.vendor %>
+      <%= content_tag :td, t.serial %>
+      <%= content_tag :td, t.tech_mac %>
+      <%= content_tag :td, t.wifi_mac %>
+      <%= content_tag :td, t.tech_ip %>
+      <%= content_tag :td, t.wifi_ip %>
+      <%= content_tag :td, t.net_name %>
+      <%= content_tag :td, t.description %>
+      <%= content_tag :td, t.room_name %>
+      <%= content_tag :td, t.room_number %>
+    <% end %>
   <% end %>
-  </tr>
 
-</table>
+<% end %>
 
